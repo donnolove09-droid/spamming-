@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: spamsms
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.11.9
